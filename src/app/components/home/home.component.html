@@ -1,0 +1,329 @@
+<!--Primary-->
+
+<div class="container primary">
+    <div class="row">
+        <div class="col"><br>
+            <!-- <p>Master Your Career Growth with Our Top-Rated,</p>
+            <p>Expert-Led Courses</p> -->
+            <p>Master Your Career Growth with Our Top-Rated, Expert-Led Courses</p>
+        </div>
+    </div>
+</div><br><br>
+
+
+<!-- Secondary -->
+
+<div class="container secondary">
+  <div class="row justify-content-center">
+    <div class="col-md-12 buttons">
+      <!-- Previous Button with Image -->
+      <button class="Prev" (click)="prev()" [disabled]="startIndex === 0">
+        <img src="assets/images/back.png" alt="Previous" width="30" height="30" />
+      </button>
+
+      <div class="button-wrapper" [ngClass]="{'slide-left': isSlidingLeft, 'slide-right': isSlidingRight}">
+        <ng-container *ngFor="let button of visibleButtons; let i = index">
+          <button class="button" [ngClass]="'button' + (startIndex + i + 1)">
+            {{ button }}
+          </button>
+        </ng-container>
+      </div>
+         
+
+      <!-- Next Button with Image -->
+      <button class="Next" (click)="next()" [disabled]="endIndex >= buttons.length">
+        <img src="assets/images/next.png" alt="Next" width="30" height="30" />
+      </button>
+    </div>
+  </div>
+</div><br><br>
+
+  
+<!--Tertiary-->
+<!--1st row-->
+
+<div class="container tertiary">
+    <div class="row">
+      <div class="col-md-4">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM1.png" alt="imageone"/>
+            </figure>
+            <div class="article-body">
+              <h2>PRINCE2® 7 Practitioner: Interactive & Gamified Learning</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div>
+            <br>
+              <p>The PRINCE2® 7 Practitioner Interactive & Gamified Learning is designed for aspiring and current proje...</p>
+              <div class="price">
+                <span>From</span>
+                <h4>£199.99</h4>
+                <span>/ month</span>
+              </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£1099<span class="transparent">1455</span> in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+            
+            
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-md-4">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM2.png" alt="imagetwo"/>
+            </figure>
+            <div class="article-body">
+              <h2>PRINCE2® 7 Foundation Ultimate Edition</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div><br>
+              <p>PRINCE2® 7 Foundation Gamified Certification comprises innovative additions and improvements. T..</p>
+              <div class="price">
+                <span>From</span>
+                <h4>£99.99</h4>
+                <span>/ month</span>
+            </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£769 in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+              
+
+  
+      <div class="col-md-4">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM3.png" alt="imagethree"/>
+            </figure>
+            <div class="article-body">
+              <h2>PRINCE2® 7 Foundation: Interactive & Gamified Learning</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div><br>
+              <p>The PRINCE2® 7 Practitioner Interactive & Gamified Learning is designed for aspiring and current proje...</p>
+              <div class="price">
+                <span>From</span>
+                <h4>£199.99</h4>
+                <span>/ month</span>
+            </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£1049 in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+<!-- Start of second row -->
+<div class="container tertiary">
+    <div class="row">
+      <div class="col-md-4">
+        <article><br>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM4.png" alt="imagefour"/>
+            </figure>
+            <div class="article-body">
+              <h2>IASSC Lean Six Sigma Black Belt™ with Official Exam (ICBB™)</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div><br>
+              <p>Do you wish to qualify as a Lean Six Sigma Practitioner? Upon completing the Yellow and Green Belts, individu... </p>
+              <div class="price">
+                <span>From</span>
+                <h4>£99.99</h4>
+                <span>/ month</span>
+            </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£869 in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-md-4">
+        <article><br>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM5.png" alt="imagefive"/>
+            </figure>
+            <div class="article-body">
+              <h2>PRINCE2® 7 Practitioner Ultimate Edition</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div><br>
+              <p>The PRINCE2® 7 Practitioner Gamified Certification is designed for project managers and project profession...</p>
+              <div class="price">
+                <span>From</span>
+                <h4>£79.99</h4>
+                <span>/ month</span>
+            </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£869 in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+  
+      <div class="col-md-4">
+        <article><br>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/images/PM6.png" alt="imagesix"/>
+            </figure>
+            <div class="article-body">
+              <h2>PRINCE2® 7th Edition Practitioner with Exam</h2>
+              <div class="cardbutton">
+                <button class="button1"><img src="assets/images/time.png" alt="Time Icon">Modules</button>
+                <button class="button2"><img src="assets/images/add-friend.png" alt="Add Friend Icon">Professional Certificate</button>
+            </div><br>
+              <p>PRINCE2® 7 Foundation Gamified Certification comprises innovative additions and improvements. T..</p>
+              <div class="price">
+                <span>From</span>
+                <h4>£99.99</h4>
+                <span>/ month</span>
+            </div><br><br>
+            <div class="view-container">
+              <div class="view col d-flex justify-content-between align-items-center">
+                <p class="price ">£959 in full</p>
+                <a href="#" class="read-more" (click)="openPopup($event)">View details
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            </div>
+              
+              <!-- Popup Card -->
+              <div class="popup-card" *ngIf="isPopupVisible">
+                <div class="popup-content">
+                  <p class="content">"Ready to take the next step in your career? Choose a plan that suits you best and start learning today!"</p>
+                  <button (click)="closePopup()">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+</div>
+</div><br><br>
+  
+
+<!-- quarter-->
+<div class="container quarter">
+    <div class="row col-md-12">
+      <div class="pagination"><br><br>
+    <button class="buttonone">Show more <img src="/assets/images/right-arrow.png" class="arrow" alt="show-icon"/></button>
+    <button class="buttontwo">View all</button>
+      </div>
+  </div>
+</div><br><br>
+
+
+
+
+
+
+   
+   
+   
+   
+   
+
+
+
+
+
