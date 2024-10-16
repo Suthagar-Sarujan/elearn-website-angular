@@ -1,3 +1,10 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+@font-face {
+  font-family: 'Plus Jakarta San';
+  src: url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap) format("opentype");
+}
 
 /*primary*/
 .primary{
@@ -31,8 +38,8 @@ p{
         cursor: pointer;
         transition: background-color 0.3s;
         border-radius: 3000px;
-        border: 2px solid #6e6a6a;
-        background-color: #0b8aad24;
+        border: 1px solid #20151533;
+        background-color: #FFFFFF;
         font-size: 15px;
         font-family: 'Plus Jakarta Sans';
         font-weight: bold;
@@ -125,24 +132,62 @@ transition: color 0.3s ease-out;
 }
 
 .cardbutton {
-    display: flex;
-    gap: 3px; 
+  display: flex;
+  gap: 3px; 
 }
 
 .button1, .button2 {
-    background-color: #02153f46;
-    border-radius: 3000px;
-    display: flex;
-    align-items: center; 
-    padding: 5px 10px; 
-    font-size: 10.5px;
-    font-weight: 600;
+  background-color: #EFF4FF;
+  border: none;
+  color: #1C1C1C;
+  border-radius: 3000px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 20px;
+  text-align: left;
 }
 
-.button1 img, .button2 img {
-    width: 15%; 
-    margin-right: 5px; 
+.button1 img {
+  width: 25%;
+  height: 3vh;
+  margin-right: 5px;
 }
+
+.button2 img {
+  width: 10%;
+  height: 3vh;
+  margin-right: 5px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .cardbutton {
+    gap: 8px; 
+
+  .button1, .button2 {
+    padding: 8px 12px; 
+    font-size: 8px; 
+    line-height: 10px; 
+  }
+
+  .button1 img {
+    width: 45%; 
+    height: 3vh; 
+    margin-right: 8px; 
+  }
+
+  .button2 img {
+    width: 30%; 
+    height: 3vh;
+    margin-right: 8px; 
+  }
+}
+}
+
+
 
 .article-wrapper p {
     font-family: Plus Jakarta Sans;
@@ -172,6 +217,37 @@ transition: color 0.3s ease-out;
   }
   
   
+@media (min-width: 768px) and (max-width: 991px) {
+  .article-wrapper p {
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;  
+    color: #4F4F4F;
+}  
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .price h4 {
+    margin: 0;
+    font-size: 13px;
+    padding: 0;
+    color: #000000;
+  }
+
+  .price span {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    color: #4F4F4F;
+  }
+}
+
   figure {
     margin: 0;
     padding: 0;
@@ -179,12 +255,21 @@ transition: color 0.3s ease-out;
     overflow: hidden;
   }
   
-  article img {
-    max-width: 100%;
-    transform-origin: center;
-    transform: scale(var(--img-scale));
-    transition: transform 0.4s ease-in-out;
-  }
+
+img {
+  object-fit: cover; 
+  width: 100%; 
+  height: 100%; 
+  transform-origin: center; 
+  transform: scale(var(--img-scale, 1)); 
+  transition: transform 0.4s ease-in-out; 
+}
+
+
+img:hover {
+  --img-scale: 1.1; 
+}
+
   
   .article-body {
     padding: 24px;
@@ -221,10 +306,48 @@ view .transparent{
   font-weight: 600;
   line-height: 22.68px;
   text-align: left;
+  text-decoration: none;
 
 }
 
-
+@media (min-width: 768px) and (max-width: 991px) {
+  .view-container .view {
+    display: flex;         
+    justify-content: space-between; 
+    align-items: center;  
+  }
+  
+  
+  
+  
+  .view .price {
+    margin: 0;            
+    color: #000;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22.68px;
+    text-align: left;
+  
+  }
+  
+  view .transparent{
+    background-color: #02153f46;
+  }
+  
+  .view .read-more {
+    display: flex;       
+    align-items: center; 
+    color: #000;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 22.68px;
+    text-align: left;
+    text-decoration: none;
+  
+  }
+}
 
   .popup-card {
     position: fixed;
